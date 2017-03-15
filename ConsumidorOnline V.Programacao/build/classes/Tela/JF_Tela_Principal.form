@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="jMenu2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="MENU"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Ctrl+J"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="ALTERAR INFORMACOES DA CONTA"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem2ActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem5">
+              <Properties>
+                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
+                  <KeyStroke key="Ctrl+R"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="SAIR"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+      </SubComponents>
+    </Menu>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="JTF_tag1" min="-2" pref="225" max="-2" attributes="0"/>
+                                  <Component id="JTF_tag2" min="-2" pref="225" max="-2" attributes="0"/>
+                                  <Component id="JTF_tag3" min="-2" pref="224" max="-2" attributes="0"/>
+                                  <Component id="JTF_tag4" min="-2" pref="224" max="-2" attributes="0"/>
+                                  <Component id="JTF_tag5" min="-2" pref="224" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="54" pref="54" max="-2" attributes="0"/>
+                                      <Component id="JL_Preco_Item" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="JTF_tag_Preco_maximo" min="-2" pref="224" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="65" pref="65" max="-2" attributes="0"/>
+                                      <Component id="JL_Nome_pesquisa" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="JTF_Nome_Pesquisa" min="-2" pref="224" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="28" pref="28" max="-2" attributes="0"/>
+                                      <Component id="JBTN_Salvar_Criar_Item" min="-2" pref="71" max="-2" attributes="0"/>
+                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                      <Component id="JBTN_Cancelar_Criar_item" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="65" pref="65" max="-2" attributes="0"/>
+                              <Component id="JL_Tag_Pesquisa" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="JL_Tag_Pesquisa_Selecionado" min="-2" max="-2" attributes="0"/>
+                          <Component id="JTF_tag1_selecionado" min="-2" pref="233" max="-2" attributes="0"/>
+                          <Component id="JTF_tag2__selecionado" min="-2" pref="233" max="-2" attributes="0"/>
+                          <Component id="JTF_tag3_selecionado" min="-2" pref="233" max="-2" attributes="0"/>
+                          <Component id="JTF_tag4_selecionado" min="-2" pref="233" max="-2" attributes="0"/>
+                          <Component id="JTF_tag5_selecionado" min="-2" pref="233" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="54" pref="54" max="-2" attributes="0"/>
+                              <Component id="JL_Preco_Item1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="JTF_tag_Preco_maximo_selecionado" min="-2" pref="233" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="65" pref="65" max="-2" attributes="0"/>
+                              <Component id="JL_Nome_pesquisa1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="JTF_Nome_Pesquisa_selecionado" min="-2" pref="233" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="JBTN_Editar_Selecionado" min="-2" pref="71" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="JBTN_Salvar_Selecionado" min="-2" pref="71" max="-2" attributes="0"/>
+                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <Component id="JBTN_Cancelar_Selecionado" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="JL_Ola_Usu" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <Component id="JL_Nome_Usu_Bonito" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="JL_Novo_Item_Pesquisa" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="279" max="-2" attributes="0"/>
+                              <Component id="JL_Items_Pesquisados" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="283" max="-2" attributes="0"/>
+                              <Component id="JL_Item_selecionado_Pesquisa" min="-2" pref="269" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="474" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="JL_Ola_Usu" min="-2" max="-2" attributes="0"/>
+                  <Component id="JL_Nome_Usu_Bonito" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="39" pref="39" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="JL_Novo_Item_Pesquisa" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="JL_Items_Pesquisados" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="JL_Item_selecionado_Pesquisa" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="JL_Tag_Pesquisa" min="-2" max="-2" attributes="0"/>
+                          <Component id="JL_Tag_Pesquisa_Selecionado" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="JTF_tag1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                              <Component id="JTF_tag2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                              <Component id="JTF_tag3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
+                              <Component id="JTF_tag4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                              <Component id="JTF_tag5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
+                              <Component id="JL_Preco_Item" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="JTF_tag_Preco_maximo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                              <Component id="JL_Nome_pesquisa" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                              <Component id="JTF_Nome_Pesquisa" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="JBTN_Salvar_Criar_Item" min="-2" max="-2" attributes="0"/>
+                                  <Component id="JBTN_Cancelar_Criar_item" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="JTF_tag1_selecionado" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                              <Component id="JTF_tag2__selecionado" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                              <Component id="JTF_tag3_selecionado" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
+                              <Component id="JTF_tag4_selecionado" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                              <Component id="JTF_tag5_selecionado" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
+                              <Component id="JL_Preco_Item1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                              <Component id="JTF_tag_Preco_maximo_selecionado" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                              <Component id="JL_Nome_pesquisa1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                              <Component id="JTF_Nome_Pesquisa_selecionado" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="JBTN_Editar_Selecionado" min="-2" max="-2" attributes="0"/>
+                                  <Component id="JBTN_Salvar_Selecionado" min="-2" max="-2" attributes="0"/>
+                                  <Component id="JBTN_Cancelar_Selecionado" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Component id="jScrollPane1" min="-2" pref="572" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="JL_Ola_Usu">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="OL&#xc1;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JL_Nome_Usu_Bonito">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="VINICIUS"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JL_Novo_Item_Pesquisa">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="NOVO ITEM DE PESQUISA"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JL_Tag_Pesquisa">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="TAGS DE PESQUISA"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JL_Nome_pesquisa">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NOME DA PESQUISA"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="JTF_tag1">
+    </Component>
+    <Component class="javax.swing.JTextField" name="JTF_tag2">
+    </Component>
+    <Component class="javax.swing.JTextField" name="JTF_tag3">
+    </Component>
+    <Component class="javax.swing.JTextField" name="JTF_tag4">
+    </Component>
+    <Component class="javax.swing.JTextField" name="JTF_tag5">
+    </Component>
+    <Component class="javax.swing.JTextField" name="JTF_tag_Preco_maximo">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JTF_tag_Preco_maximoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="JBTN_Salvar_Criar_Item">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Salvar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="JBTN_Cancelar_Criar_item">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cancelar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JL_Preco_Item">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="PRECO MAXIMO DO ITEM"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="JTF_Nome_Pesquisa">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JTF_Nome_PesquisaActionPerformed"/>
+      </Events>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="JTable">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="1" rowCount="40">
+                <Column editable="false" title="Nome da pesquisa" type="java.lang.Object"/>
+              </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="JL_Items_Pesquisados">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="ITEM DE PESQUISA"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JL_Nome_pesquisa1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NOME DA PESQUISA"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JL_Tag_Pesquisa_Selecionado">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="TAGS DE PESQUISA DO ITEM SELECIONADO"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="JTF_Nome_Pesquisa_selecionado">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JTF_Nome_Pesquisa_selecionadoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JL_Preco_Item1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="PRECO MAXIMO DO ITEM"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="JBTN_Cancelar_Selecionado">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cancelar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JL_Item_selecionado_Pesquisa">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="NOVO ITEM DE PESQUISA"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="JBTN_Salvar_Selecionado">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Salvar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="JTF_tag_Preco_maximo_selecionado">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JTF_tag_Preco_maximo_selecionadoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="JTF_tag2__selecionado">
+    </Component>
+    <Component class="javax.swing.JTextField" name="JTF_tag3_selecionado">
+    </Component>
+    <Component class="javax.swing.JTextField" name="JTF_tag4_selecionado">
+    </Component>
+    <Component class="javax.swing.JTextField" name="JTF_tag5_selecionado">
+    </Component>
+    <Component class="javax.swing.JTextField" name="JTF_tag1_selecionado">
+    </Component>
+    <Component class="javax.swing.JButton" name="JBTN_Editar_Selecionado">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="EDITAR"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>
