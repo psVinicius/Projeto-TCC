@@ -1,0 +1,118 @@
+create database consumidoronlinetcc2
+use consumidoronlinetcc2
+
+create table cliente (
+id int not null auto_increment,
+nome varchar(250) not null,
+login varchar(250) not null unique,
+senha varchar(250) not null,
+email varchar(250) not null unique,
+primary key (id)
+
+);
+
+create table itemPesquisa (
+id_pesquisa int not null auto_increment,
+id_cliente int not null,
+nome_pesquisa varchar(250),
+preco varchar(250),
+foreign key(id_cliente) references cliente(id),
+primary key (id_pesquisa)
+
+);
+
+
+
+create table produto (
+id int not null auto_increment,
+nome varchar(250),
+primary key (id)
+
+);
+
+create table tag (
+id int not null auto_increment,
+nome_tag varchar(250),
+primary key (id)
+
+);
+
+create table pesquisa_tag (
+id_pesquisa int not null,
+id_tag int not null,
+foreign key(id_pesquisa) references itemPesquisa (id_pesquisa),
+foreign key(id_tag) references tag (id)
+
+);
+
+create table produto_tag (
+id_produto int not null,
+id_tag int not null,
+foreign key(id_produto) references produto(id),
+foreign key(id_tag) references tag (id)
+
+);
+
+drop table produto_tag
+drop table pesquisa_tag
+drop table tag
+drop table produto
+drop table itemPesquisa
+drop table cliente
+
+select * from cliente;
+select * from itemPesquisa;
+select * from produto;
+select * from tag;
+select * from pesquisa_tag;
+select * from produto_tag;
+
+select cliente.id, cliente.nome, itemPesquisa.id_pesquisa, itemPesquisa.nome_pesquisa, tag.id, tag.nome_tag
+from cliente, itempesquisa, tag, pesquisa_tag
+where pesquisa_tag.id_pesquisa = itemPesquisa.id_pesquisa and 
+cliente.id = itemPesquisa.id_cliente and 
+pesquisa_tag.id_tag = tag.id and cliente.id = 9
+
+
+select cliente.*, itemPesquisa.*, tag.*, pesquisa_tag.*
+from cliente, itempesquisa, tag, pesquisa_tag
+where pesquisa_tag.id_pesquisa = itemPesquisa.id_pesquisa and 
+cliente.id = itemPesquisa.id_cliente and 
+pesquisa_tag.id_tag = tag.id and cliente.id = 10
+
+SELECT cliente.id, cliente.nome, pesquisa_tag.id_pesquisa, itemPesquisa.nome_pesquisa 
+FROM   cliente, pesquisa_tag, itemPesquisa
+WHERE  cliente.id = itemPesquisa.id_cliente                AND
+       itemPesquisa.id_pesquisa = pesquisa_tag.id_pesquisa AND
+	   cliente.id = 10
+
+select cliente.id, itemPesquisa.id_pesquisa
+from cliente, itemPesquisa
+where cliente.id = itemPesquisa.id_cliente and cliente.id = 10
+
+SELECT * FROM Tag where nome_tag = 'vermelho'
+
+select cliente.nome, cliente.id itemPesquisa.*
+from cliente, itemPesquisa
+where cliente.id = itemPesquisa.id_cliente 
+and ((id_cliente = 2) and (itemPesquisa.nome_pesquisa = "pczão"))
+
+select itemPesquisa.*
+from itemPesquisa
+where itemPesquisa.id_cliente = 10
+
+SELECT itemPesquisa.*, pesquisa_tag.*, tag.*
+FROM   itemPesquisa, pesquisa_tag, tag
+WHERE  itemPesquisa.id_pesquisa = pesquisa_tag.id_pesquisa AND
+       tag.id = pesquisa_tag.id_tag                        AND
+       itemPesquisa.id_cliente = 10                        AND
+       itemPesquisa.nome_pesquisa = "cores"
+       
+       
+SELECT *
+FROM itemPesquisa
+WHERE itemPesquisa.id_cliente = 10 and itemPesquisa.nome_pesquisa = "cores"      
+
+SELECT *, tag.nome_tag
+FROM pesquisa_tag, tag
+WHERE pesquisa_tag.id_tag = tag.id and pesquisa_tag.id_pesquisa = 102
