@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/ConsumidorOnline/src/DAO/ClienteDAO.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/ConsumidorOnline/src/Tela/JF_Tela_Principal.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/ConsumidorOnline/src/ModeloTabela/Tag.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/ConsumidorOnline/src/DAO/Pesquisa_TagDAO.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/ConsumidorOnline/src/DAO/TagDAO.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/ConsumidorOnline/src/ModeloTabela/ItemPesquisa.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/ConsumidorOnline/src/DAO/ItemPesquisaDAO.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/ConsumidorOnline/src/DAO/Produto_TagDAO.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/ConsumidorOnline/src/Auxiliar/VerificaPreco.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/ConsumidorOnline/src/Tela/JF_Login_CriarConta.java</file>
+        </group>
+    </open-files>
+</project-private>
