@@ -1,0 +1,209 @@
+create database consumidoronlinetcc2
+use consumidoronlinetcc2
+
+create table cliente (
+id int not null auto_increment,
+nome varchar(250) not null,
+login varchar(250) not null unique,
+senha varchar(250) not null,
+email varchar(250) not null unique,
+primary key (id)
+
+);
+
+create table itemPesquisa (
+id_pesquisa int not null auto_increment,
+id_cliente int not null,
+nome_pesquisa varchar(250),
+preco float,
+foreign key(id_cliente) references cliente(id),
+primary key (id_pesquisa)
+
+);
+
+
+
+create table produto (
+id int not null auto_increment,
+nome varchar(250),
+preco float,
+link varchar(250) not null,
+marca varchar(250),
+primary key (id)
+
+);
+
+create table tag (
+id int not null auto_increment,
+nome_tag varchar(250),
+primary key (id)
+
+);
+
+create table pesquisa_tag (
+id_pesquisa int not null,
+id_tag int not null,
+foreign key(id_pesquisa) references itemPesquisa (id_pesquisa),
+foreign key(id_tag) references tag (id)
+
+);
+
+create table produto_tag (
+id_produto int not null,
+id_tag int not null,
+foreign key(id_produto) references produto(id),
+foreign key(id_tag) references tag (id)
+
+);
+
+drop table produto_tag;
+drop table pesquisa_tag;
+drop table tag;
+drop table produto;
+drop table itemPesquisa;
+drop table cliente;
+
+select * from cliente;
+select * from itemPesquisa;
+select * from produto;
+select * from tag;
+select * from pesquisa_tag;
+select * from produto_tag;
+
+
+select cliente.id, cliente.nome, itemPesquisa.id_pesquisa, itemPesquisa.nome_pesquisa, tag.id, tag.nome_tag
+from cliente, itempesquisa, tag, pesquisa_tag
+where pesquisa_tag.id_pesquisa = itemPesquisa.id_pesquisa and 
+cliente.id = itemPesquisa.id_cliente and 
+pesquisa_tag.id_tag = tag.id and cliente.id = 9;
+
+
+select cliente.*, itemPesquisa.*, tag.*, pesquisa_tag.*
+from cliente, itempesquisa, tag, pesquisa_tag
+where pesquisa_tag.id_pesquisa = itemPesquisa.id_pesquisa and 
+cliente.id = itemPesquisa.id_cliente and 
+pesquisa_tag.id_tag = tag.id and cliente.id = 1;
+
+SELECT cliente.id, cliente.nome, pesquisa_tag.id_pesquisa, itemPesquisa.nome_pesquisa 
+FROM   cliente, pesquisa_tag, itemPesquisa
+WHERE  cliente.id = itemPesquisa.id_cliente                AND
+       itemPesquisa.id_pesquisa = pesquisa_tag.id_pesquisa AND
+	   cliente.id = 10;
+
+select cliente.id, itemPesquisa.id_pesquisa
+from cliente, itemPesquisa
+where cliente.id = itemPesquisa.id_cliente and cliente.id = 10;
+
+SELECT * FROM Tag where nome_tag = 'vermelho';
+
+select cliente.nome, cliente.id itemPesquisa.*
+from cliente, itemPesquisa
+where cliente.id = itemPesquisa.id_cliente 
+and ((id_cliente = 2) and (itemPesquisa.nome_pesquisa = "pczão"));
+
+select itemPesquisa.*
+from itemPesquisa
+where itemPesquisa.id_cliente = 10;
+
+SELECT itemPesquisa.*, pesquisa_tag.*, tag.*
+FROM   itemPesquisa, pesquisa_tag, tag
+WHERE  itemPesquisa.id_pesquisa = pesquisa_tag.id_pesquisa AND
+       tag.id = pesquisa_tag.id_tag                        AND
+       itemPesquisa.id_cliente = 10                        AND
+       itemPesquisa.nome_pesquisa = "cores";
+       
+       
+SELECT *
+FROM itemPesquisa
+WHERE itemPesquisa.id_cliente = 10 and itemPesquisa.nome_pesquisa = "cores" ;     
+
+SELECT *, tag.nome_tag
+FROM pesquisa_tag, tag
+WHERE pesquisa_tag.id_tag = tag.id and pesquisa_tag.id_pesquisa = 102;
+
+insert into produto values (0, 'pc',2000);
+insert into produto values (0, 'pc2',20000);
+insert into produto_tag values (1,1);
+insert into produto_tag values (2,2);
+insert into produto_tag values (2,27);
+insert into tag values (0, 'PC');
+
+
+SELECT produto_tag.id_produto    
+FROM  produto_tag
+WHERE produto_tag.id_tag = 1 and produto_tag.id_tag = 0;
+
+select * 
+from produto
+where produto.id = 1;
+
+
+
+insert into produto values (0, 'pc',2000,'www.google.com','dell');
+select * from produto
+
+select * 
+from pesquisa_tag
+where pesquisa_tag.id_pesquisa = 19;
+
+select produto.*
+from produto, produto_tag
+where produto_tag.id_tag = 1 OR produto_tag.id_tag = 2 OR produto_tag.id_tag = 3 OR produto_tag.id_tag = 4 OR produto_tag.id_tag = 5
+group by (produto.id);
+
+select * 
+from itempesquisa
+where itempesquisa.id_cliente = 1;
+
+insert into produto values (0, 'teste', 2000); 
+
+insert into produto_tag values (3, 1);
+insert into produto_tag values (3, 2);
+insert into produto_tag values (3, 3);
+insert into produto_tag values (3, 4);
+insert into produto_tag values (3, 5);
+
+delete pesquisa_tag.*
+from pesquisa_tag
+where pesquisa_tag.id_pesquisa = 1;
+
+delete itempesquisa.*
+from itempesquisa
+where itempesquisa.id_pesquisa = 1
+
+select * from itempesquisa
+
+select produto_tag.* 
+from produto_tag 
+where produto_tag.id_produto = 3;
+
+update pesquisa_tag
+set pesquisa_tag.id_tag = 1
+where pesquisa_tag.id_pesquisa = 19 and pesquisa_tag.id_tag = 11;
+
+select * from itempesquisa where itempesquisa.id_pesquisa = 19;
+
+update itempesquisa
+set preco = 200000
+where itempesquisa.id_pesquisa = 19;
+
+update itempesquisa
+set nome_pesquisa = 'aaaaa'
+where itempesquisa.id_pesquisa = 19;
+
+update cliente
+set nome = "oi", login = "tt", senha = "t", email = "tt"
+where cliente.id = 4;
+
+
+select *
+from itempesquisa
+where itempesquisa.nome_pesquisa = "Up2erro2";
+
+select *
+from itempesquisa;
+
+select *
+from cliente;
+
+UPDATE cliente SET cliente.senha = 1234555555555 WHERE cliente.id = 16;
