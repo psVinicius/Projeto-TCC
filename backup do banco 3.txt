@@ -1,0 +1,436 @@
+create database consumidoronlinetcc2
+use consumidoronlinetcc2
+
+create table cliente (
+id int not null auto_increment,
+nome varchar(250) not null,
+login varchar(250) not null unique,
+senha varchar(250) not null,
+email varchar(250) not null unique,
+primary key (id)
+
+);
+
+create table itemPesquisa (
+id_pesquisa int not null auto_increment,
+id_cliente int not null,
+nome_pesquisa varchar(250),
+preco float,
+foreign key(id_cliente) references cliente(id),
+primary key (id_pesquisa)
+
+);
+
+
+
+create table produto (
+id int not null auto_increment,
+nome varchar(250),
+preco float,
+descricao varchar(500),
+link varchar(250) not null,
+marca varchar(250),
+primary key (id)
+
+);
+
+create table tag (
+id int not null auto_increment,
+nome_tag varchar(250),
+primary key (id)
+
+);
+
+create table pesquisa_tag (
+id_pesquisa int not null,
+id_tag int not null,
+foreign key(id_pesquisa) references itemPesquisa (id_pesquisa),
+foreign key(id_tag) references tag (id)
+
+);
+
+create table produto_tag (
+id_produto int not null,
+id_tag int not null,
+foreign key(id_produto) references produto(id),
+foreign key(id_tag) references tag (id)
+
+);
+
+drop table produto_tag;
+drop table pesquisa_tag;
+drop table tag;
+drop table produto;
+drop table itemPesquisa;
+drop table cliente;
+
+select * from cliente;
+select * from itemPesquisa;
+select * from produto;
+select * from tag;
+select * from pesquisa_tag;
+select * from produto_tag;
+
+
+select cliente.id, cliente.nome, itemPesquisa.id_pesquisa, itemPesquisa.nome_pesquisa, tag.id, tag.nome_tag
+from cliente, itempesquisa, tag, pesquisa_tag
+where pesquisa_tag.id_pesquisa = itemPesquisa.id_pesquisa and 
+cliente.id = itemPesquisa.id_cliente and 
+pesquisa_tag.id_tag = tag.id and cliente.id = 9;
+
+
+select cliente.*, itemPesquisa.*, tag.*, pesquisa_tag.*
+from cliente, itempesquisa, tag, pesquisa_tag
+where pesquisa_tag.id_pesquisa = itemPesquisa.id_pesquisa and 
+cliente.id = itemPesquisa.id_cliente and 
+pesquisa_tag.id_tag = tag.id and cliente.id = 1;
+
+SELECT cliente.id, cliente.nome, pesquisa_tag.id_pesquisa, itemPesquisa.nome_pesquisa 
+FROM   cliente, pesquisa_tag, itemPesquisa
+WHERE  cliente.id = itemPesquisa.id_cliente                AND
+       itemPesquisa.id_pesquisa = pesquisa_tag.id_pesquisa AND
+	   cliente.id = 10;
+
+select cliente.id, itemPesquisa.id_pesquisa
+from cliente, itemPesquisa
+where cliente.id = itemPesquisa.id_cliente and cliente.id = 10;
+
+SELECT * FROM Tag where nome_tag = 'vermelho';
+
+select cliente.nome, cliente.id itemPesquisa.*
+from cliente, itemPesquisa
+where cliente.id = itemPesquisa.id_cliente 
+and ((id_cliente = 2) and (itemPesquisa.nome_pesquisa = "pczão"));
+
+select itemPesquisa.*
+from itemPesquisa
+where itemPesquisa.id_cliente = 10;
+
+SELECT itemPesquisa.*, pesquisa_tag.*, tag.*
+FROM   itemPesquisa, pesquisa_tag, tag
+WHERE  itemPesquisa.id_pesquisa = pesquisa_tag.id_pesquisa AND
+       tag.id = pesquisa_tag.id_tag                        AND
+       itemPesquisa.id_cliente = 10                        AND
+       itemPesquisa.nome_pesquisa = "cores";
+       
+       
+SELECT *
+FROM itemPesquisa
+WHERE itemPesquisa.id_cliente = 10 and itemPesquisa.nome_pesquisa = "cores" ;     
+
+SELECT *, tag.nome_tag
+FROM pesquisa_tag, tag
+WHERE pesquisa_tag.id_tag = tag.id and pesquisa_tag.id_pesquisa = 102;
+
+insert into produto values (0, 'pc',2000);
+insert into produto values (0, 'pc2',20000);
+insert into produto_tag values (1,1);
+insert into produto_tag values (2,2);
+insert into produto_tag values (2,27);
+insert into tag values (0, 'PC');
+
+
+SELECT produto_tag.id_produto    
+FROM  produto_tag
+WHERE produto_tag.id_tag = 1 and produto_tag.id_tag = 0;
+
+select * 
+from produto
+where produto.id = 1;
+
+
+
+insert into produto values (0, 'pc',2000,'www.google.com','dell');
+
+insert into produto_tag values(1,78);
+insert into produto_tag values(1,77);
+insert into produto_tag values(1,81);
+
+select * from produto;
+
+select * from produto_tag where produto_tag.id_produto = 1;
+
+select * 
+from pesquisa_tag
+where pesquisa_tag.id_pesquisa = 19;
+
+select produto.*
+from produto, produto_tag
+where produto_tag.id_tag = 1 OR produto_tag.id_tag = 2 OR produto_tag.id_tag = 3 OR produto_tag.id_tag = 4 OR produto_tag.id_tag = 5
+group by (produto.id);
+
+select * 
+from itempesquisa
+where itempesquisa.id_cliente = 1;
+
+insert into produto values (0, 'teste', 2000); 
+
+insert into produto_tag values (3, 1);
+insert into produto_tag values (3, 2);
+insert into produto_tag values (3, 3);
+insert into produto_tag values (3, 4);
+insert into produto_tag values (3, 5);
+
+delete pesquisa_tag.*
+from pesquisa_tag
+where pesquisa_tag.id_pesquisa = 1;
+
+delete itempesquisa.*
+from itempesquisa
+where itempesquisa.id_pesquisa = 1;
+
+select * from itempesquisa;
+
+select * from cliente;
+
+select max(itempesquisa.id_pesquisa) from itempesquisa where itempesquisa.id_cliente = 1;
+
+select count(itempesquisa.id_pesquisa) from itempesquisa where itempesquisa.id_cliente = 1
+login
+select * from itempesquisa where itempesquisa.id_cliente = 18
+
+
+select produto_tag.* 
+from produto_tag 
+where produto_tag.id_produto = 3;
+
+select * from itempesquisa
+update pesquisa_tag
+set pesquisa_tag.id_tag = 1
+where pesquisa_tag.id_pesquisa = 19 and pesquisa_tag.id_tag = 11;
+
+select * from itempesquisa where itempesquisa.id_pesquisa = 19;
+
+update itempesquisa
+set preco = 200000
+where itempesquisa.id_pesquisa = 19;
+
+update itempesquisa
+set nome_pesquisa = 'aaaaa'
+where itempesquisa.id_pesquisa = 19;
+
+update cliente
+set nome = "oi", login = "tt", senha = "t", email = "tt"
+where cliente.id = 4;
+
+
+select *
+from itempesquisa
+where itempesquisa.nome_pesquisa = "Up2erro2";
+
+select *
+from itempesquisa;
+
+select *
+from cliente;
+
+UPDATE cliente SET cliente.senha = 1234555555555 WHERE cliente.id = 16;
+
+select pesquisa_tag.id_tag from pesquisa_tag where pesquisa_tag.id_pesquisa = 56;
+
+
+select produto_tag.id_produto from produto_tag where produto_tag.id_tag = 249 or produto_tag.id_tag = 0
+or produto_tag.id_tag = 0 or produto_tag.id_tag = 0
+or produto_tag.id_tag = 0
+group by (produto_tag.id_produto) having count(*) >= 1;
+
+
+select * from tag where tag.id = 249
+
+select * from produto_tag where produto_tag.id_produto = 2;
+select * from produto where produto.id = 2
+select pesquisa_tag.* from pesquisa_tag where id_pesquisa = 7;
+select * from itempesquisa where itempesquisa.id_pesquisa = 7;
+
+insert into produto values (0,'PC Raptor',3027.44,'1x Intel® Core i3-7100\n
+1x Chipset H110\n
+1x 8GB DDR4 2133MHz\n
+1x HDD 1TB\n
+1x GTX 1050 2GB GDDR5 128 -Bit\n
+1x 400W 80 PLUS\n
+1x Viper 2 Black/Red\n
+1x Air Cooler\n
+1x Windows 10 (Versão de testes 30 dias)', 'https://rocketz.com.br/store/kits/raptor', 'rocketz');
+
+insert into produto_tag values (5,159);
+insert into produto_tag values (5,160);
+insert into produto_tag values (5,161);
+insert into produto_tag values (5,162);
+insert into produto_tag values (5,163);
+insert into produto_tag values (5,164);
+insert into produto_tag values (5,165);
+insert into produto_tag values (5,166);
+insert into produto_tag values (5,167);
+insert into produto_tag values (5,168);
+insert into produto_tag values (5,169);
+insert into produto_tag values (5,170);
+insert into produto_tag values (5,171);
+insert into produto_tag values (5,172);
+insert into produto_tag values (5,173);
+insert into produto_tag values (5,174);
+insert into produto_tag values (5,175);
+insert into produto_tag values (5,176);
+insert into produto_tag values (5,177);
+insert into produto_tag values (5,178);
+insert into produto_tag values (5,179);
+insert into produto_tag values (5,180);
+insert into produto_tag values (5,181);
+insert into produto_tag values (5,182);
+insert into produto_tag values (5,183);
+insert into produto_tag values (5,184);
+insert into produto_tag values (5,185);
+insert into produto_tag values (5,186);
+insert into produto_tag values (5,187);
+insert into produto_tag values (5,188);
+insert into produto_tag values (5,189);
+insert into produto_tag values (5,190);
+insert into produto_tag values (5,68);
+insert into produto_tag values (5,71);
+insert into produto_tag values (5,77);
+insert into produto_tag values (5,80);
+insert into produto_tag values (5,137);
+insert into produto_tag values (5,192);
+insert into produto_tag values (5,193);
+insert into produto_tag values (5,194);
+insert into produto_tag values (5,195);
+
+insert into produto values (0,'BloodBorne',99.00,'Apresentando Bloodborne™, O ultimo RPG de ação da renomada desenvolvedora FromSoftware, exclusivo para o sistema PlayStation®4.\nEnfrente seus pesadelos enquanto você busca respostas na antiga cidade de Yharnam, agora amaldiçoada\ncom uma estranha e endêmica doença que se espalha pelas ruas como incêndio.\nPerigo, morte e loucura espreitam a cada esquina neste sombrio e horrível mundo,\ne você precisa descobrir seus segredos mais terríveis para sobreviver.\n', 'http://www.saraiva.com.br/bloodborne-ps4-8646585.html?pac_id=135884&gclid=CjwKEAjwpJ_JBRC3tYai4Ky09zQSJAC5r7ruvKBnMqurND7YdQ7OmwlMJGbJLsNlNZxNlrMRs_CVRhoCM4fw_wcB', 'FROMSOFTWARE');
+
+insert into produto_tag values (6,196);
+insert into produto_tag values (6,197);
+insert into produto_tag values (6,198);
+insert into produto_tag values (6,199);
+insert into produto_tag values (6,200);
+insert into produto_tag values (6,201);
+insert into produto_tag values (6,202);
+insert into produto_tag values (6,203);
+insert into produto_tag values (6,204);
+insert into produto_tag values (6,205);
+insert into produto_tag values (6,206);
+insert into produto_tag values (6,207);
+insert into produto_tag values (6,208);
+insert into produto_tag values (6,209);
+insert into produto_tag values (6,210);
+insert into produto_tag values (6,211);
+insert into produto_tag values (6,212);
+insert into produto_tag values (6,213);
+insert into produto_tag values (6,214);
+insert into produto_tag values (6,215);
+insert into produto_tag values (6,216);
+insert into produto_tag values (6,217);
+insert into produto_tag values (6,218);
+insert into produto_tag values (6,219);
+insert into produto_tag values (6,220);
+insert into produto_tag values (6,221);
+insert into produto_tag values (6,222);
+insert into produto_tag values (6,223);
+insert into produto_tag values (6,224);
+insert into produto_tag values (6,225);
+insert into produto_tag values (6,226);
+insert into produto_tag values (6,227);
+insert into produto_tag values (6,228);
+insert into produto_tag values (6,229);
+insert into produto_tag values (6,230);
+insert into produto_tag values (6,231);
+insert into produto_tag values (6,232);
+insert into produto_tag values (6,233);
+insert into produto_tag values (6,234);
+insert into produto_tag values (6,235);
+insert into produto_tag values (6,236);
+
+
+
+insert into produto values (0,'The Witcher 3: Wild Hunt Complete Edition PS4',199.90,'Torne-se um Witcher, um dos últimos matadores de monstro de aluguel! Rastreie a criança da profecia, uma arma viva capaz de destruição incalculável.\nViaje através de reinos em guerra e mate criaturas lendárias. Explore cidades repletas de corrupção e navegue para ilhas indomáveis,\nlar de clãs de guerreiros marítimos. Em um mundo que ferve em turbulência, suas ações irao moldar a história.', 'https://www.kabum.com.br/cgi-local/site/produtos/descricao_ofertas.cgi?codigo=80037&origem=52', 'CD PROJEKT RED');
+
+
+insert into produto_tag values (7,197);
+insert into produto_tag values (7,198);
+insert into produto_tag values (7,199);
+insert into produto_tag values (7,200);
+insert into produto_tag values (7,201);
+insert into produto_tag values (7,202);
+insert into produto_tag values (7,203);
+insert into produto_tag values (7,205);
+insert into produto_tag values (7,211);
+insert into produto_tag values (7,218);
+insert into produto_tag values (7,219);
+insert into produto_tag values (7,221);
+insert into produto_tag values (7,225);
+insert into produto_tag values (7,226);
+insert into produto_tag values (7,227);
+insert into produto_tag values (7,228);
+insert into produto_tag values (7,232);
+insert into produto_tag values (7,233);
+insert into produto_tag values (7,234);
+insert into produto_tag values (7,235);
+insert into produto_tag values (7,236);
+insert into produto_tag values (7,237);
+insert into produto_tag values (7,238);
+insert into produto_tag values (7,239);
+insert into produto_tag values (7,240);
+insert into produto_tag values (7,241);
+insert into produto_tag values (7,242);
+insert into produto_tag values (7,243);
+insert into produto_tag values (7,244);
+insert into produto_tag values (7,245);
+insert into produto_tag values (7,246);
+insert into produto_tag values (7,247);
+insert into produto_tag values (7,248);
+insert into produto_tag values (7,249);
+insert into produto_tag values (7,250);
+insert into produto_tag values (7,251);
+insert into produto_tag values (7,252);
+
+
+insert into produto values (0,'The Witcher III - Wild Hunt - Complete Edition - PS4',179.90,'Os fãs de RPG, jogos de aventura e estratégia têm motivos de sobra para jogarem The Witcher III: Wild Hunt, o último capítulo desta renomada série de games.\nNo jogo com edição completa você representará o herói e assassino de criaturas de aluguel Witcher, um homem poderoso que contraiu uma maldição terrível e recebeu poderes mágicos, que fizeram dele capaz de identificar e matar criaturas de outro mundo.\n', 'http://www.saraiva.com.br/the-witcher-iii-wild-hunt-complete-edition-ps4-9369458.html?sku=9369458&force_redirect=1&pac_id=123134&gclid=CjwKEAjwpJ_JBRC3tYai4Ky09zQSJAC5r7ruzKx0n-jS38dbPg3HJ96DfhJUkMmGYqVbqRh3swnLLhoCejHw_wcB', 'CD PROJEKT RED');
+
+insert into produto_tag values (8,197);
+insert into produto_tag values (8,198);
+insert into produto_tag values (8,199);
+insert into produto_tag values (8,200);
+insert into produto_tag values (8,201);
+insert into produto_tag values (8,202);
+insert into produto_tag values (8,203);
+insert into produto_tag values (8,205);
+insert into produto_tag values (8,211);
+insert into produto_tag values (8,218);
+insert into produto_tag values (8,219);
+insert into produto_tag values (8,220);
+insert into produto_tag values (8,221);
+insert into produto_tag values (8,225);
+insert into produto_tag values (8,226);
+insert into produto_tag values (8,227);
+insert into produto_tag values (8,228);
+insert into produto_tag values (8,232);
+insert into produto_tag values (8,233);
+insert into produto_tag values (8,234);
+insert into produto_tag values (8,235);
+insert into produto_tag values (8,236);
+insert into produto_tag values (8,237);
+insert into produto_tag values (8,238);
+insert into produto_tag values (8,239);
+insert into produto_tag values (8,240);
+insert into produto_tag values (8,241);
+insert into produto_tag values (8,242);
+insert into produto_tag values (8,243);
+insert into produto_tag values (8,244);
+insert into produto_tag values (8,220);
+insert into produto_tag values (8,246);
+insert into produto_tag values (8,247);
+insert into produto_tag values (8,248);
+insert into produto_tag values (8,249);
+insert into produto_tag values (8,250);
+insert into produto_tag values (8,251);
+insert into produto_tag values (8,252);
+
+select * from produto;
+
+select produto_tag.*, tag.nome_tag
+from produto_tag, tag
+where produto_tag.id_tag = tag.id and produto_tag.id_produto = 5;
+
+select * from tag;
+
+delete produto_tag.*
+from produto_tag 
+where produto_tag.id_produto = 5
