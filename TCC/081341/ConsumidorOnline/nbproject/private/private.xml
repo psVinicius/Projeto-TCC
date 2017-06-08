@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/Tela/JF_TrocouEmail.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/Tela/JF_EsqueciSenha.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/Tela/JF_ConfirmaEmail.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/ModeloTabela/Tag.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/DAO/ProdutoDAO.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/Auxiliar/EnviarEmail.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/ModeloTabela/Pesquisa_Tag.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/Tela/JF_Ajuda.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/Tela/JF_Produto_Empresa.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/ModeloTabela/Cliente.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/Tela/JF_Login_CriarConta.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/Tela/JF_Tela_Principal.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/ModeloTabela/Produto_Tag.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/DAO/Pesquisa_TagDAO.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/Auxiliar/Tred.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/ModeloTabela/ItemPesquisa.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/DAO/TagDAO.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/DAO/ItemPesquisaDAO.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/ModeloTabela/Produto.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/Conexao/Conexao.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/Auxiliar/VerificaPreco.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/DAO/ClienteDAO.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/Tela/JF_AlterarInfoConta.java</file>
+            <file>file:/D:/Curso/Java/CadastroBancoDeDadosV02_1/Nova%20pasta/Nova%20pasta/ConsumidorOnline/src/DAO/Produto_TagDAO.java</file>
+        </group>
+    </open-files>
+</project-private>
